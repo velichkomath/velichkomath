@@ -244,6 +244,7 @@ dialog[open]{animation:pop .18s ease-out}
 {
  "donut": "https://vk.com/donut/miniurokipomatematike",
  "site": "https://velichkomath.ru/",
+ "ym": 112484056,
  "sets": {
   "z01-05-kvartira": {
    "cell": "1–5",
@@ -884,27 +885,39 @@ function toast(msg){
 }
 
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+// Цели Метрики. trackLinks даёт плоский отчёт «Загрузки файлов» по 80 адресам;
+// reachGoal добавляет разрез по виду файла с номером задания в параметрах.
+// Молча ничего не делает, если счётчик не загрузился (блокировщик, нет сети).
+function goal(name,params){
+  try{ if(window.ym&&DATA.ym) ym(DATA.ym,'reachGoal',name,params); }catch(e){}
+}
+
 // download — чтобы файл лёг на диск с русским именем, а URL остался латинским
-const file=(cls,f,label,icon='')=>
-  `<a class="btn ${cls}" href="files/${f.n}" download="${esc(f.dl)}">${icon}${label}</a>`;
-const lock=`<a class="btn btn-lock" href="${esc(DATA.donut)}" target="_blank" rel="noopener" title="Ответы к тренажёру в подписке VK Donut">${LOCK}Ответы</a>`;
+const file=(cls,f,label,icon='',kind='',k='')=>
+  `<a class="btn ${cls}" href="files/${f.n}" download="${esc(f.dl)}"`
+  +` data-kind="${esc(kind)}" data-key="${esc(k)}">${icon}${label}</a>`;
+const lock=k=>`<a class="btn btn-lock" href="${esc(DATA.donut)}" target="_blank" rel="noopener"`
+  +` data-donut data-key="${esc(k)}" title="Ответы к тренажёру в подписке VK Donut">${LOCK}Ответы</a>`;
 const row=(t,d,a)=>`<li><div class="f-t"><b>${t}</b>${d?`<span>${d}</span>`:''}</div><div class="f-a">${a}</div></li>`;
 
-function rowsFor(s){
+function rowsFor(s,k){
   const f=s.files;
   let out='';
   if(f.prototipy){
     const sub='По одному примеру на каждый прототип · PDF, '+f.prototipy.size;
     out+=row('Прототипы',sub,
-      file('btn-dark',f.prototipy,'PDF',DL)
-      +(f['prototipy-otvety']?file('btn-out',f['prototipy-otvety'],'Ответы'):''));
+      file('btn-dark',f.prototipy,'PDF',DL,'prototipy',k)
+      +(f['prototipy-otvety']
+        ?file('btn-out',f['prototipy-otvety'],'Ответы','','prototipy-otvety',k):''));
   }
   if(f.trenazher){
     const sub='По пять задач на каждый прототип · PDF, '+f.trenazher.size;
     out+=row('Тренажёр',sub,
-      file('btn-dark',f.trenazher,'PDF',DL)
-      +(f['trenazher-otvety']?file('btn-out',f['trenazher-otvety'],'Ответы')
-        :(s.cell==='24'?'':lock)));
+      file('btn-dark',f.trenazher,'PDF',DL,'trenazher',k)
+      +(f['trenazher-otvety']
+        ?file('btn-out',f['trenazher-otvety'],'Ответы','','trenazher-otvety',k)
+        :(s.cell==='24'?'':lock(k))));
   }
   return out;
 }
@@ -917,10 +930,11 @@ function openTask(k){
     +`<div class="p-t"><h2 id="dlg-title"><span class="sr">${esc(s.sr)}</span>${esc(s.title)}</h2>`
     +`${s.sub?`<p>${esc(s.sub)}</p>`:''}</div>`
     +`<button class="x" type="button" aria-label="Закрыть">${XI}</button></div>`
-    +`<ul class="rows">${rowsFor(s)}</ul>`
+    +`<ul class="rows">${rowsFor(s,k)}</ul>`
     +`<div class="p-foot"><button class="copy" type="button" data-k="${esc(k)}">Скопировать ссылку на задание</button>`
     +`${locked?'<span>Ответы к тренажёру доступны подписчикам VK Donut</span>':''}</div>`;
   if(!dlg.open)dlg.showModal();
+  goal('otkryl_zadanie',{zadanie:k});
   try{history.replaceState(null,'','#'+k)}catch(e){}
 }
 
@@ -941,6 +955,10 @@ fromHash();
 
 document.addEventListener('click',e=>{
   if(e.target.closest('.x')){dlg.close();return}
+  const a=e.target.closest('a[data-kind]');
+  if(a){goal('skachal_'+a.dataset.kind.replace(/-/g,'_'),{zadanie:a.dataset.key});return}
+  const dn=e.target.closest('a[data-donut]');
+  if(dn){goal('donut_iz_okna',{zadanie:dn.dataset.key});return}
   const c=e.target.closest('.copy');
   if(c){
     const url=DATA.site+'#'+c.dataset.k;
