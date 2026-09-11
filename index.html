@@ -3,22 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>Тренировочные работы по математике для ОГЭ-2027 — Николай Величко</title>
-<meta name="description" content="Тренировочные работы и разминки по математике для подготовки к ОГЭ-2027. Новые прототипы ФИПИ, ответы посчитаны дважды двумя способами, вёрстка как в официальных материалах. Автор — учитель высшей категории, эксперт по проверке ОГЭ и ЕГЭ. Новый выпуск каждый вторник. Скачать бесплатно.">
+<title>Задания ОГЭ-2027 по математике: прототипы, тренажёры и ответы в PDF</title>
+<meta name="description" content="Все задания ОГЭ-2027 по математике по номерам: прототипы, тренажёры и ответы в PDF для учителей и репетиторов. Скачивание без регистрации.">
 <link rel="canonical" href="https://velichkomath.ru/">
 <link rel="icon" href="img/icon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="img/icon-180.png">
-
-<!-- Open Graph: чтобы ссылка в Telegram и ВК разворачивалась картинкой -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Тренировочные работы по математике для ОГЭ-2027">
-<meta property="og:description" content="Новый выпуск каждый вторник. Новые прототипы, ответы посчитаны дважды, вёрстка как в официальных материалах.">
+<meta property="og:title" content="Задания ОГЭ-2027 по математике по номерам">
+<meta property="og:description" content="Прототипы, тренажёры и ответы в PDF. Скачивание без регистрации.">
 <meta property="og:url" content="https://velichkomath.ru/">
-<meta property="og:image" content="https://velichkomath.ru/og.png"><!-- 1200×630, сделаем из рендера листа -->
+<meta property="og:image" content="https://velichkomath.ru/og.png">
 <meta property="og:locale" content="ru_RU">
 <meta name="twitter:card" content="summary_large_image">
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -26,411 +22,931 @@
   "name": "Николай Юрьевич Величко",
   "jobTitle": "Учитель математики",
   "url": "https://velichkomath.ru/",
-  "sameAs": ["https://vk.com/miniurokipomatematike"],
-  "description": "Учитель математики высшей категории, эксперт по проверке ОГЭ и ЕГЭ, 13 лет стажа. Автор тренировочных работ для подготовки к ОГЭ."
+  "sameAs": ["https://vk.com/miniurokipomatematike", "https://t.me/pif_oge", "https://www.youtube.com/@Миниурокипоматематике"],
+  "description": "Учитель математики высшей категории, эксперт по проверке ОГЭ и ЕГЭ. Автор тренировочных материалов для подготовки к ОГЭ."
 }
 </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=112484056', 'ym');
+
+    ym(112484056, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/112484056" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 
 <style>
 :root{
   --ink:#16150F;
-  --accent:#993C1D;
-  --math:#185FA5;
   --paper:#FFFFFF;
-  --desk:#E9EDF2;
-  --desk-deep:#DCE2EA;
-  --muted:#5C6270;
-  --rule:#D5DBE3;
-  --grid:rgba(24,95,165,.10);
-
-  --serif:"PT Serif","Times New Roman",Georgia,serif;
-  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-
-  --pad:clamp(20px,5vw,64px);
-  --measure:34rem;
+  --wash:#F3F3F0;
+  --line:#E0DED6;
+  --muted:#66645B;
+  --orange:#E97426;
+  --orange-soft:#FDEBDD;
+  --blue:#185FA5;
 }
-
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{
-  margin:0;
-  background:var(--desk);
-  color:var(--ink);
-  font-family:var(--sans);
-  font-size:17px;
-  line-height:1.6;
-  -webkit-font-smoothing:antialiased;
-}
-img{max-width:100%;height:auto;display:block}
-a{color:var(--math)}
+body{margin:0;font-family:"Golos Text",system-ui,"Segoe UI",Roboto,Arial,sans-serif;font-size:16px;line-height:1.55;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,ul,ol,dl,dd{margin:0}
+ul,ol{padding:0;list-style:none}
+a{color:var(--blue)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:6px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{max-width:1180px;margin:0 auto;padding-left:28px;padding-right:28px}
+svg.i{width:18px;height:18px;flex:none}
 
-/* ─── лист ─── */
-.sheet{
-  max-width:1080px;
-  margin:0 auto;
-  background:var(--paper);
-  box-shadow:0 1px 2px rgba(22,21,15,.10),0 12px 40px -12px rgba(22,21,15,.22);
-}
+.top{border-bottom:1px solid var(--line)}
+.top-in{display:flex;align-items:center;gap:32px;height:56px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.chip{display:grid;place-items:center;width:46px;height:34px;border-radius:8px;background:var(--orange);font-weight:800;font-size:13px;letter-spacing:.04em}
+.brand b{display:block;font-weight:700;font-size:16px;line-height:1.2}
+.brand small{display:block;font-size:13px;color:var(--muted)}
+.nav{display:flex;gap:28px;margin-left:auto}
+.nav a,.social a{color:var(--ink);text-decoration:none;font-weight:500;font-size:15px;white-space:nowrap}
+.nav a:hover,.social a:hover{color:var(--orange)}
+.social{display:flex;gap:16px;padding-left:28px;border-left:1px solid var(--line)}
 
-/* ─── шапка ─── */
-.top{
-  display:flex;align-items:center;justify-content:space-between;gap:16px;
-  padding:18px var(--pad);
-  border-bottom:1px solid var(--rule);
-}
-.wordmark{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
-.wordmark img{width:27px;height:34px}
-.wordmark b{
-  font-family:var(--sans);font-weight:600;font-size:.82rem;
-  letter-spacing:.14em;text-transform:uppercase;line-height:1.25;
-}
-.wordmark span{display:block;font-weight:400;color:var(--muted);letter-spacing:.06em}
-.top-link{
-  font-size:.9rem;text-decoration:none;color:var(--muted);
-  border-bottom:1px solid var(--rule);padding-bottom:2px;
-}
-.top-link:hover{color:var(--math);border-color:var(--math)}
+.intro{display:flex;align-items:flex-end;justify-content:space-between;gap:16px 40px;flex-wrap:wrap;padding-top:24px;padding-bottom:18px}
+.intro h1{font-size:34px;line-height:1.1;font-weight:800;letter-spacing:-.02em}
+.lead{margin-top:6px;font-size:16px;color:var(--muted);max-width:64ch}
 
-/* ─── hero ─── */
-.hero{
-  display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,4vw,56px);
-  align-items:center;
-  padding:clamp(36px,6vw,72px) var(--pad);
-  border-bottom:1px solid var(--rule);
-}
-.eyebrow{
-  font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--accent);margin:0 0 18px;
-}
-.hero h1{
-  font-family:var(--serif);font-weight:700;
-  font-size:clamp(2rem,4.4vw,3.1rem);line-height:1.14;
-  margin:0 0 20px;letter-spacing:-.01em;
-}
-.hero h1 em{font-style:normal;color:var(--math)}
-.lede{font-size:1.06rem;color:var(--muted);margin:0 0 30px;max-width:30rem}
-.actions{display:flex;flex-wrap:wrap;gap:12px}
-.btn{
-  display:inline-block;padding:14px 24px;border-radius:2px;
-  font-size:.97rem;font-weight:600;text-decoration:none;
-  border:1.5px solid transparent;transition:background .15s,border-color .15s,color .15s;
-}
-.btn-primary{background:var(--accent);color:#fff}
-.btn-primary:hover{background:#7d3018}
-.btn-ghost{border-color:var(--rule);color:var(--ink)}
-.btn-ghost:hover{border-color:var(--math);color:var(--math)}
-.btn-note{margin:16px 0 0;font-size:.86rem;color:var(--muted)}
+.tasks{padding-bottom:56px}
+.part{font-size:13px;font-weight:600;color:var(--muted);margin-bottom:8px}
+.grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
+.grid+.part{margin-top:16px}
+.tile{display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:10px 10px 11px;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink);text-decoration:none;transition:border-color .12s,background .12s}
+.tile:hover{border-color:var(--ink);background:var(--orange-soft)}
+.n{display:grid;place-items:center;min-width:32px;height:32px;padding:0 5px;border:1.5px solid var(--ink);border-radius:6px;background:var(--paper);font-weight:800;font-size:16px;line-height:1;font-variant-numeric:tabular-nums;flex:none}
+.plot .n{font-size:12px}
+.c{font-size:13.5px;line-height:1.28;font-weight:500}
 
-/* лист в hero, на клетчатом поле */
-.preview{
-  position:relative;padding:clamp(18px,3vw,32px);
-  background:
-    repeating-linear-gradient(0deg,var(--grid) 0 1px,transparent 1px 5mm),
-    repeating-linear-gradient(90deg,var(--grid) 0 1px,transparent 1px 5mm),
-    var(--desk);
-}
-.preview img,.preview .ph{
-  box-shadow:0 2px 4px rgba(22,21,15,.14),0 18px 36px -14px rgba(22,21,15,.34);
-}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:10px 16px;border-radius:8px;border:1.5px solid transparent;font:inherit;font-size:15px;font-weight:600;line-height:1.2;text-decoration:none;white-space:nowrap;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:#34322A}
+.btn-out{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-out:hover{background:var(--orange-soft)}
+.btn-lock{border-color:var(--line);color:var(--muted);background:var(--paper)}
+.btn-lock:hover{border-color:var(--muted);color:var(--ink)}
 
-/* заглушка под картинку — заменить на <img> */
-.ph{
-  background:var(--paper);border:1px solid var(--rule);
-  aspect-ratio:210/297;display:grid;place-items:center;text-align:center;
-  color:var(--muted);font-size:.8rem;padding:16px;
-}
+.foot{background:var(--wash);padding:44px 0 28px}
+.foot-in{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.foot p{max-width:52ch;color:var(--muted)}
+.foot p b{color:var(--ink);font-weight:700}
+.foot-links{display:flex;flex-direction:column;gap:8px}
+.foot-links a{font-weight:500}
+.copyr{margin-top:28px;font-size:13px;color:var(--muted)}
 
-/* ─── секции с номером задания ─── */
-.block{
-  display:grid;grid-template-columns:52px 1fr;gap:clamp(16px,3vw,32px);
-  padding:clamp(34px,5vw,58px) var(--pad);
-  border-bottom:1px solid var(--rule);
-}
-.num{
-  width:34px;height:34px;flex:none;
-  border:1.5px solid var(--ink);
-  display:grid;place-items:center;
-  font-family:var(--serif);font-size:1.05rem;font-weight:700;
-}
-.block h2{
-  font-family:var(--serif);font-weight:700;
-  font-size:clamp(1.4rem,2.6vw,1.85rem);line-height:1.2;
-  margin:0 0 14px;
-}
-.block p{margin:0 0 14px;max-width:var(--measure)}
-.block p:last-child{margin-bottom:0}
+dialog{border:0;padding:0;border-radius:16px;width:calc(100% - 32px);max-width:580px;max-height:88vh;overflow:auto;color:var(--ink);background:var(--paper)}
+dialog::backdrop{background:rgba(22,21,15,.55)}
+dialog[open]{animation:pop .18s ease-out}
+@keyframes pop{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.dlg-in{padding:24px 26px 22px}
+.p-head{display:flex;align-items:center;gap:16px;margin-bottom:12px}
+.p-cell{display:grid;place-items:center;min-width:56px;height:56px;padding:0 10px;border-radius:6px;background:var(--orange);font-weight:800;font-size:22px;flex:none}
+.p-t{flex:1;min-width:0;padding-top:2px}
+.p-t h2{font-size:22px;font-weight:700;line-height:1.25}
+.p-t p{font-size:14px;color:var(--muted);margin-top:4px}
+.x{flex:none;display:grid;place-items:center;width:40px;height:40px;border:0;border-radius:10px;background:var(--wash);color:var(--ink);cursor:pointer}
+.x:hover{background:var(--line)}
+.rows li{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0;border-top:1px solid var(--line)}
+.f-t b{display:block;font-size:17px;font-weight:600;line-height:1.3}
+.f-t span{display:block;font-size:14px;color:var(--muted);margin-top:2px}
+.f-a{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.rows .btn-out,.rows .btn-lock{min-width:128px}
+.p-foot{display:flex;align-items:center;justify-content:space-between;gap:10px 16px;flex-wrap:wrap;padding-top:14px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.copy{font:inherit;font-size:14px;font-weight:600;color:var(--blue);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
 
-/* состав выпуска */
-.parts{list-style:none;padding:0;margin:0;max-width:var(--measure)}
-.parts li{
-  display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;
-  padding:18px 0;border-top:1px solid var(--rule);
-}
-.parts li:last-child{border-bottom:1px solid var(--rule)}
-.parts b{font-family:var(--serif);font-size:1.02rem;font-weight:700}
-.parts .qty{
-  font-family:var(--serif);color:var(--math);font-weight:700;
-  font-size:2.5rem;line-height:.85;min-width:2.8rem;
-}
-.parts span{display:block;color:var(--muted);font-size:.94rem}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,16px);opacity:0;pointer-events:none;background:var(--ink);color:#fff;padding:12px 18px;border-radius:10px;font-size:14px;max-width:min(560px,92vw);transition:opacity .2s,transform .2s;z-index:10}
+.toast.show{opacity:1;transform:translate(-50%,0)}
 
-/* лупа: увеличение по наведению */
-.zoomable{position:relative;display:block;line-height:0}
-.lens{
-  position:absolute;pointer-events:none;opacity:0;
-  width:230px;height:230px;border-radius:50%;
-  border:1px solid rgba(22,21,15,.28);
-  box-shadow:0 6px 24px -6px rgba(22,21,15,.45),inset 0 0 0 1px rgba(255,255,255,.7);
-  background:var(--paper) no-repeat;
-  transition:opacity .12s;
+@media (max-width:1000px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:900px){
+  .wrap{padding-left:18px;padding-right:18px}
+  .top-in{flex-wrap:wrap;height:auto;padding-top:14px;padding-bottom:12px;gap:12px 14px}
+  .social{margin-left:auto;padding-left:0;border-left:0}
+  .nav{order:3;width:100%;margin-left:0;gap:22px;overflow-x:auto;padding-bottom:2px}
+  .intro h1{font-size:28px}
+  .rows li{flex-direction:column;align-items:flex-start;gap:12px}
+  .f-a{justify-content:flex-start}
 }
-.zoom-hint{display:none;margin:12px 0 0;font-size:.8rem;letter-spacing:.03em;color:var(--muted)}
-@media (hover:hover) and (pointer:fine){
-  .zoomable{cursor:zoom-in}
-  .zoomable.on .lens{opacity:1}
-  .zoom-hint{display:block}
+@media (max-width:600px){
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+  .tile{flex-direction:row;align-items:center;gap:10px;min-height:58px;padding:8px 10px}
+  .n{min-width:34px;height:34px;font-size:16px}
+  .plot .n{font-size:11px;padding:0 5px}
+  .c{font-size:13px}
+  .intro h1{font-size:24px}
+  dialog{width:100%;max-width:100%;margin:auto 0 0;border-radius:16px 16px 0 0;max-height:90vh}
+  .dlg-in{padding:20px 18px 24px}
+  .p-cell{min-width:48px;height:48px;font-size:19px}
+  .p-t h2{font-size:19px}
 }
-@media (prefers-reduced-motion:reduce){.lens{transition:none}}
-
-/* галерея рендеров */
-.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin-top:8px}
-.shots figure{margin:0}
-.shots figcaption{margin-top:10px;font-size:.84rem;color:var(--muted)}
-
-/* календарь выпусков */
-.cal{margin-top:26px}
-.cal-grid{display:flex;flex-wrap:wrap;gap:14px 30px}
-.mon h3{
-  margin:0 0 10px;font-family:var(--sans);font-size:.74rem;font-weight:600;
-  letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
-}
-.mon ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0}
-.mon li{
-  font-family:var(--serif);font-size:1.02rem;line-height:1;
-  width:34px;height:34px;display:grid;place-items:center;
-  border:1px solid var(--rule);color:var(--ink);
-}
-.mon li.first{border-color:var(--accent);color:var(--accent);font-weight:700}
-.cal-note{margin:20px 0 0;font-size:.9rem;color:var(--muted);max-width:var(--measure)}
-.cal-note b{color:var(--ink)}
-
-/* тариф */
-.plan{
-  border:1.5px solid var(--ink);padding:clamp(20px,3vw,30px);
-  max-width:var(--measure);
-}
-.price{display:flex;align-items:baseline;gap:10px;margin:0 0 4px}
-.price b{font-family:var(--serif);font-size:2.4rem;font-weight:700;line-height:1}
-.price i{font-style:normal;color:var(--muted);font-size:.95rem}
-.plan ul{margin:18px 0 0;padding:0 0 0 1.1em}
-.plan li{margin-bottom:9px}
-.status{
-  margin:18px 0 0;padding:11px 14px;background:var(--desk);
-  font-size:.9rem;color:var(--ink);border-left:3px solid var(--accent);
-}
-
-/* FAQ как задание */
-.faq{max-width:var(--measure)}
-.faq dt{
-  font-family:var(--serif);font-size:1.06rem;line-height:1.35;
-  margin:0 0 8px;padding-top:20px;border-top:1px solid var(--rule);
-}
-.faq div:first-child dt{border-top:none;padding-top:0}
-.faq dd{margin:0 0 22px;color:var(--muted)}
-.faq dd::before{
-  content:"Ответ: ";color:var(--math);font-weight:600;
-  font-family:var(--sans);font-size:.95rem;
-}
-
-/* автор */
-.author{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start;max-width:var(--measure)}
-.portrait{width:120px;height:120px;border-radius:50%;object-fit:cover}
-
-/* подвал */
-.foot{
-  padding:26px var(--pad) 34px;
-  font-size:.86rem;color:var(--muted);
-  display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;
-}
-.foot a{color:var(--muted)}
-
-@media (max-width:860px){
-  .hero{grid-template-columns:1fr}
-  .preview{padding:16px}
-  .preview img{max-height:52vh;width:auto;margin:0 auto}
-  .block{grid-template-columns:1fr;gap:14px}
-  .author{grid-template-columns:1fr}
-}
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  *{transition:none!important;animation:none!important}
-}
-:focus-visible{outline:2px solid var(--math);outline-offset:3px}
+@media (max-width:520px){.social{display:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
 
-<div class="sheet">
-
-  <header class="top">
-    <a class="wordmark" href="/">
-      <img src="img/mark.png" alt="" width="76" height="96">
-      <b>Николай Величко<span>математика · ОГЭ</span></b>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="/">
+      <span class="chip" aria-hidden="true">ПИФ</span>
+      <span><b>ОГЭ-2027 по математике</b><small>Николай Величко</small></span>
     </a>
-    <a class="top-link" href="https://vk.com/miniurokipomatematike">Сообщество ВКонтакте →</a>
-  </header>
-
-  <section class="hero">
-    <div>
-      <p class="eyebrow">ОГЭ-2027 · математика · 9 класс</p>
-      <h1>Тренировочные работы, которые <em>не надо переделывать</em> перед печатью</h1>
-      <p class="lede">Новые прототипы ФИПИ, ответы посчитаны дважды двумя способами, вёрстка повторяет официальные материалы. Открыл, распечатал, дал классу.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="files/oge-2027-obrazec-raboty.pdf" download="ОГЭ-2027 математика. Образец тренировочной работы (Величко).pdf">Скачать образец</a>
-        <a class="btn btn-ghost" href="https://vk.com/miniurokipomatematike">Сообщество ВКонтакте</a>
-      </div>
-      <p class="btn-note">Образец: работа № 6, PDF на 5 страниц, готов к печати на A4, без регистрации.<br><a href="files/oge-2027-obrazec-otvety.pdf" download="ОГЭ-2027 математика. Образец — лист ответов (Величко).pdf">Лист ответов отдельным файлом →</a></p>
-      <p class="zoom-hint">Наведите курсор на страницу — покажу набор вблизи.</p>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#tasks">Задания</a>
+      <a href="about.html">О проекте</a>
+    </nav>
+    <div class="social">
+      <a href="https://vk.com/miniurokipomatematike" target="_blank" rel="noopener">VK</a>
+      <a href="https://t.me/pif_oge" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://www.youtube.com/@Миниурокипоматематике" target="_blank" rel="noopener">YouTube</a>
     </div>
-    <div class="preview">
-      <span class="zoomable" data-zoom="img/page1@2x.webp"><img src="img/page1.webp" width="1000" height="1414" alt="Первая страница тренировочной работы: задания 1–5 по описанию маркировки автомобильных шин"><span class="lens"></span></span>
+  </div>
+</header>
+
+<main>
+  <div class="wrap intro">
+    <div>
+      <h1>Задания ОГЭ-2027 по математике</h1>
+      <p class="lead">Прототипы, тренажёры и ответы в PDF. Нажмите задание, скачивание без регистрации.</p>
+    </div>
+  </div>
+
+  <section id="tasks" class="wrap tasks" aria-label="Задания ОГЭ по номерам">
+    <p class="part">Часть 1</p>
+    <div class="grid">
+        <a class="tile plot" href="#z01-05-kvartira" data-k="z01-05-kvartira" title="Задания 1–5, сюжет «Квартира»"><span class="n">1–5</span><span class="c">Квартира</span></a>
+        <a class="tile plot" href="#z01-05-listy-bumagi" data-k="z01-05-listy-bumagi" title="Задания 1–5, сюжет «Листы бумаги»"><span class="n">1–5</span><span class="c">Листы бумаги</span></a>
+        <a class="tile plot" href="#z01-05-pech" data-k="z01-05-pech" title="Задания 1–5, сюжет «Печь для бани»"><span class="n">1–5</span><span class="c">Печь для бани</span></a>
+        <a class="tile plot" href="#z01-05-plan-mestnosti" data-k="z01-05-plan-mestnosti" title="Задания 1–5, сюжет «План местности»"><span class="n">1–5</span><span class="c">План местности</span></a>
+        <a class="tile plot" href="#z01-05-tarify" data-k="z01-05-tarify" title="Задания 1–5, сюжет «Тарифы»"><span class="n">1–5</span><span class="c">Тарифы</span></a>
+        <a class="tile plot" href="#z01-05-uchastok" data-k="z01-05-uchastok" title="Задания 1–5, сюжет «Участок»"><span class="n">1–5</span><span class="c">Участок</span></a>
+        <a class="tile plot" href="#z01-05-shiny" data-k="z01-05-shiny" title="Задания 1–5, сюжет «Шины»"><span class="n">1–5</span><span class="c">Шины</span></a>
+        <a class="tile" href="#z06" data-k="z06"><span class="n">6</span><span class="c">Дроби и вычисления</span></a>
+        <a class="tile" href="#z07" data-k="z07"><span class="n">7</span><span class="c">Координатная прямая</span></a>
+        <a class="tile" href="#z08" data-k="z08"><span class="n">8</span><span class="c">Квадратные корни и степени</span></a>
+        <a class="tile" href="#z09" data-k="z09"><span class="n">9</span><span class="c">Уравнения</span></a>
+        <a class="tile" href="#z10" data-k="z10"><span class="n">10</span><span class="c">Теория вероятностей</span></a>
+        <a class="tile" href="#z11" data-k="z11"><span class="n">11</span><span class="c">Графики функций</span></a>
+        <a class="tile" href="#z12" data-k="z12"><span class="n">12</span><span class="c">Расчёты по формулам</span></a>
+        <a class="tile" href="#z13" data-k="z13"><span class="n">13</span><span class="c">Неравенства</span></a>
+        <a class="tile" href="#z14" data-k="z14"><span class="n">14</span><span class="c">Прогрессии</span></a>
+        <a class="tile" href="#z15" data-k="z15"><span class="n">15</span><span class="c">Треугольники</span></a>
+        <a class="tile" href="#z16" data-k="z16"><span class="n">16</span><span class="c">Окружность и круг</span></a>
+        <a class="tile" href="#z17" data-k="z17"><span class="n">17</span><span class="c">Четырёхугольники</span></a>
+        <a class="tile" href="#z18" data-k="z18"><span class="n">18</span><span class="c">Фигуры на решётке</span></a>
+        <a class="tile" href="#z19" data-k="z19"><span class="n">19</span><span class="c">Анализ высказываний</span></a>
+    </div>
+
+    <p class="part">Часть 2</p>
+    <div class="grid">
+        <a class="tile" href="#z20" data-k="z20"><span class="n">20</span><span class="c">Уравнения и неравенства</span></a>
+        <a class="tile" href="#z21" data-k="z21"><span class="n">21</span><span class="c">Текстовые задачи</span></a>
+        <a class="tile" href="#z22" data-k="z22"><span class="n">22</span><span class="c">Построение графика</span></a>
+        <a class="tile" href="#z23" data-k="z23"><span class="n">23</span><span class="c">Геометрия: вычисление</span></a>
+        <a class="tile" href="#z24" data-k="z24"><span class="n">24</span><span class="c">Геометрия: доказательство</span></a>
+        <a class="tile" href="#z25" data-k="z25"><span class="n">25</span><span class="c">Геометрия: повышенный уровень</span></a>
     </div>
   </section>
+</main>
 
-  <section class="block">
-    <div><div class="num">1</div></div>
-    <div>
-      <h2>Что выходит каждый вторник</h2>
-      <ul class="parts">
-        <li><span class="qty">1</span><div><b>Тренировочная работа</b><span>Полный вариант, задания 1–25, обе части, бланк ответов.</span></div></li>
-        <li><span class="qty">3</span><div><b>Разминки</b><span>Короткие карточки на 5–7 минут: блоки 6–10, 11–14, 15–19. По два варианта каждая.</span></div></li>
-        <li><span class="qty">+</span><div><b>Ответы</b><span>К разминке — сразу. К варианту — отдельным постом через неделю.</span></div></li>
-      </ul>
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-in">
+      <p><b>Николай Величко</b><br>Учитель математики, эксперт ОГЭ. Если ответ не сошёлся, напишите в комментариях под постом в VK — разберём.</p>
+      <nav class="foot-links" aria-label="Соцсети">
+        <a href="https://vk.com/miniurokipomatematike" target="_blank" rel="noopener">Группа VK</a>
+        <a href="https://t.me/pif_oge" target="_blank" rel="noopener">Telegram-канал</a>
+        <a href="https://www.youtube.com/@Миниурокипоматематике" target="_blank" rel="noopener">YouTube «Мини уроки по математике»</a>
+        <a href="about.html">О проекте</a>
+      </nav>
     </div>
-  </section>
+    <p class="copyr">© 2026 Николай Величко · Задания составлены на основе открытого банка ФИПИ</p>
+  </div>
+</footer>
 
-  <section class="block">
-    <div><div class="num">2</div></div>
-    <div>
-      <h2>Как это выглядит на бумаге</h2>
-      <p>Расстояния между заданиями, поля, положение номеров и строки «Ответ:» измерены по официальным вариантам и повторены. Ученик садится за работу, которая выглядит как экзамен, а не как распечатка из интернета.</p>
-      <div class="shots">
-        <figure><span class="zoomable" data-zoom="img/part1@2x.webp"><img src="img/part1.webp" width="700" height="990" alt="Часть 1: задания с графиками функций и чертежами по геометрии"><span class="lens"></span></span><figcaption>Часть 1: графики и чертежи на своих местах</figcaption></figure>
-        <figure><span class="zoomable" data-zoom="img/part2@2x.webp"><img src="img/part2.webp" width="700" height="990" alt="Часть 2: задания 20–25"><span class="lens"></span></span><figcaption>Часть 2: задания 20–25 на отдельной странице</figcaption></figure>
-        <figure><span class="zoomable" data-zoom="img/answers@2x.webp"><img src="img/answers.webp" width="700" height="990" alt="Лист ответов ко всем заданиям работы"><span class="lens"></span></span><figcaption>Лист ответов, включая эскизы графиков</figcaption></figure>
-      </div>
-    </div>
-  </section>
+<dialog id="dlg" aria-labelledby="dlg-title"><div class="dlg-in" id="dlg-body"></div></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <section class="block">
-    <div><div class="num">3</div></div>
-    <div>
-      <h2>Каждый вторник, 9:00 по Москве</h2>
-      <p>Выпуски идут с 25 августа по май — весь учебный год. К концу года через класс проходит открытый банк заданий целиком.</p>
-      <p>Бесплатная версия выкладывается в сообществе ВКонтакте: один вариант, три разминки, ответы. Ничего покупать не нужно.</p>
-      <div class="cal">
-        <div class="cal-grid">
-          <div class="mon"><h3>Август</h3><ul><li class="first">25</li></ul></div>
-          <div class="mon"><h3>Сентябрь</h3><ul><li>1</li><li>8</li><li>15</li><li>22</li><li>29</li></ul></div>
-          <div class="mon"><h3>Октябрь</h3><ul><li>6</li><li>13</li><li>20</li><li>27</li></ul></div>
-          <div class="mon"><h3>Ноябрь</h3><ul><li>3</li><li>10</li><li>17</li><li>24</li></ul></div>
-          <div class="mon"><h3>Декабрь</h3><ul><li>1</li><li>8</li><li>15</li><li>22</li><li>29</li></ul></div>
-        </div>
-        <p class="cal-note">Первый выпуск — <b>25 августа</b>. Дальше каждый вторник; после новогодних каникул выпуски продолжаются с 12 января, календарь второго полугодия появится в декабре.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="block">
-    <div><div class="num">4</div></div>
-    <div>
-      <h2>Подписка</h2>
-      <div class="plan">
-        <p class="price"><b>299 ₽</b><i>в месяц</i></p>
-        <p style="margin:0;color:var(--muted);font-size:.94rem">Всё бесплатное плюс:</p>
-        <ul>
-          <li><b>Один вариант в четырёх исполнениях.</b> Та же структура и те же прототипы, другие числа — четыре ряда пишут разные работы, проверяются по одному разбору.</li>
-          <li><b>Ответы сразу</b>, не через неделю.</li>
-          <li><b>Файл без водяного знака и QR-кода</b> — чистая печать.</li>
-          <li><b>Навигация по всему архиву</b>: по неделям и по номерам заданий 1–25.</li>
-        </ul>
-        <!-- ПЕРЕКЛЮЧИТЬ 1 сентября: заменить блок .status на кнопку в Донат -->
-        <p class="status">Подписка открывается 1 сентября 2026 года.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="block">
-    <div><div class="num">5</div></div>
-    <div>
-      <h2>Кто это делает</h2>
-      <div class="author">
-        <img class="portrait" src="img/author.webp" width="480" height="480" alt="Николай Величко">
-        <div>
-          <p>Меня зовут Николай Юрьевич Величко. Учитель математики высшей категории, тринадцать лет в школе, эксперт по проверке ОГЭ и ЕГЭ. Работы я делаю в первую очередь себе — своим девятым классам, каждую неделю.</p>
-          <p>Задания собраны на основе открытого банка ФИПИ. Ответ к каждому заданию считается дважды, двумя разными способами: если результаты разошлись, задание в выпуск не идёт. Проверять ответы за автором вам не придётся.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block">
-    <div><div class="num">6</div></div>
-    <div>
-      <h2>Вопросы</h2>
-      <dl class="faq">
-        <div>
-          <dt>Можно печатать и давать своему классу?</dt>
-          <dd>Да, для работы с учениками — печатайте сколько нужно. Нельзя перепродавать файлы и выкладывать их как свои.</dd>
-        </div>
-        <div>
-          <dt>Чем работа отличается от вариантов из сборника?</dt>
-          <dd>Числа в заданиях генерируются заново, поэтому готовых решений в интернете нет — списать не получится. Прототипы при этом ровно те, что в банке ФИПИ.</dd>
-        </div>
-        <div>
-          <dt>А если ФИПИ добавит новые прототипы?</dt>
-          <dd>Разберу их и включу в выпуски. Работа собирается заново под каждый вторник, а не берётся из готового сборника, — поэтому новый прототип попадает в неё сразу после разбора, а не в сентябре следующего года.</dd>
-        </div>
-        <div>
-          <dt>Как выдавать работу дистанционно?</dt>
-          <dd>PDF загружается в электронный журнал как домашнее задание. Ученику для решения ничего, кроме файла, не нужно.</dd>
-        </div>
-        <div>
-          <dt>Что делать, если в ответе ошибка?</dt>
-          <dd>Напишите мне в сообществе. Ответы проверяются автоматически, но если что-то разошлось — исправлю и перевыложу файл.</dd>
-        </div>
-      </dl>
-    </div>
-  </section>
-
-  <footer class="foot">
-    <span>© 2026 Николай Величко · Задания составлены на основе открытого банка ФИПИ</span>
-    <a href="https://vk.com/miniurokipomatematike">ВКонтакте</a>
-  </footer>
-
-</div>
+<script type="application/json" id="sets-data">
+{
+ "donut": "https://vk.com/donut/miniurokipomatematike",
+ "site": "https://velichkomath.ru/",
+ "sets": {
+  "z01-05-kvartira": {
+   "cell": "1–5",
+   "sr": "Задания 1–5. ",
+   "title": "Квартира",
+   "sub": "Практико-ориентированные задачи 1–5",
+   "files": {
+    "prototipy": {
+     "n": "oge2027-z01-05-kvartira-prototipy-free.pdf",
+     "dl": "ОГЭ-2027. Задания 1–5. Квартира — прототипы.pdf",
+     "size": "0,2 МБ"
+    },
+    "prototipy-otvety": {
+     "n": "oge2027-z01-05-kvartira-prototipy-otvety-free.pdf",
+     "dl": "ОГЭ-2027. Задания 1–5. Квартира — прототипы, ответы.pdf",
+     "size": "0,2 МБ"
+    },
+    "trenazher": {
+     "n": "oge2027-z01-05-kvartira-trenazher-free.pdf",
+     "dl": "ОГЭ-2027. Задания 1–5. Квартира — тренажёр.pdf",
+     "size": "0,9 МБ"
+    }
+   }
+  },
+  "z01-05-listy-bumagi": {
+   "cell": "1–5",
+   "sr": "Задания 1–5. ",
+   "title": "Листы бумаги",
+   "sub": "Практико-ориентированные задачи 1–5",
+   "files": {
+    "prototipy": {
+     "n": "oge2027-z01-05-listy-bumagi-prototipy-free.pdf",
+     "dl": "ОГЭ-2027. Задания 1–5. Листы бумаги — прототипы.pdf",
+     "size": "0,3 МБ"
+    },
+    "prototipy-otvety": {
+     "n": "oge2027-z01-05-listy-bumagi-prototipy-otvety-free.pdf",
+     "dl": "ОГЭ-2027. Задания 1–5. Листы бумаги — прототипы, ответы.pdf",
+     "size": "0,2 МБ"
+    },
+    "trenazher": {
+     "n": "oge2027-z01-05-listy-bumagi-trenazher-free.pdf",
+     "dl": "ОГЭ-2027. Задания 1–5. Листы бумаги — тренажёр.pdf",
+     "size": "1,6 МБ"
+    }
+   }
+  },
+  "z01-05-pech": {
+   "cell": "1–5",
+   "sr": "Задания 1–5. ",
+   "title": "Печь для бани",
+   "sub": "Практико-ориентированные задачи 1–5",
+   "files": {
+    "prototipy": {
+     "n": "oge2027-z01-05-pech-prototipy-free.pdf",
+     "dl": "ОГЭ-2027. Задания 1–5. Печь для бани — прототипы.pdf",
+     "size": "1,0 МБ"
+    },
+    "prototipy-otvety": {
+     "n": "oge2027-z01-05-pech-prototipy-otvety-free.pdf",
+     "dl": "ОГЭ-2027. Задания 1–5. Печь для бани — прототипы, ответы.pdf",
+     "size": "0,2 МБ"
+    },
+    "trenazher": {
+     "n": "oge2027-z01-05-pech-trenazher-free.pdf",
+     "dl": "ОГЭ-2027. Задания 1–5. Печь для бани — тренажёр.pdf",
+     "size": "1,7 МБ"
+    }
+   }
+  },
+  "z01-05-plan-mestnosti": {
+   "cell": "1–5",
+   "sr": "Задания 1–5. ",
+   "title": "План местности",
+   "sub": "Практико-ориентированные задачи 1–5",
+   "files": {
+    "prototipy": {
+     "n": "oge2027-z01-05-plan-mestnosti-prototipy-free.pdf",
+     "dl": "ОГЭ-2027. Задания 1–5. План местности — прототипы.pdf",
+     "size": "0,3 МБ"
+    },
+    "prototipy-otvety": {
+     "n": "oge2027-z01-05-plan-mestnosti-prototipy-otvety-free.pdf",
+     "dl": "ОГЭ-2027. Задания 1–5. План местности — прототипы, ответы.pdf",
+     "size": "0,2 МБ"
+    },
+    "trenazher": {
+     "n": "oge2027-z01-05-plan-mestnosti-trenazher-free.pdf",
+     "dl": "ОГЭ-2027. Задания 1–5. План местности — тренажёр.pdf",
+     "size": "1,6 МБ"
+    }
+   }
+  },
+  "z01-05-tarify": {
+   "cell": "1–5",
+   "sr": "Задания 1–5. ",
+   "title": "Тарифы",
+   "sub": "Практико-ориентированные задачи 1–5",
+   "files": {
+    "prototipy": {
+     "n": "oge2027-z01-05-tarify-prototipy-free.pdf",
+     "dl": "ОГЭ-2027. Задания 1–5. Тарифы — прототипы.pdf",
+     "size": "0,2 МБ"
+    },
+    "prototipy-otvety": {
+     "n": "oge2027-z01-05-tarify-prototipy-otvety-free.pdf",
+     "dl": "ОГЭ-2027. Задания 1–5. Тарифы — прототипы, ответы.pdf",
+     "size": "0,2 МБ"
+    },
+    "trenazher": {
+     "n": "oge2027-z01-05-tarify-trenazher-free.pdf",
+     "dl": "ОГЭ-2027. Задания 1–5. Тарифы — тренажёр.pdf",
+     "size": "0,9 МБ"
+    }
+   }
+  },
+  "z01-05-uchastok": {
+   "cell": "1–5",
+   "sr": "Задания 1–5. ",
+   "title": "Участок",
+   "sub": "Практико-ориентированные задачи 1–5",
+   "files": {
+    "prototipy": {
+     "n": "oge2027-z01-05-uchastok-prototipy-free.pdf",
+     "dl": "ОГЭ-2027. Задания 1–5. Участок — прототипы.pdf",
+     "size": "0,4 МБ"
+    },
+    "prototipy-otvety": {
+     "n": "oge2027-z01-05-uchastok-prototipy-otvety-free.pdf",
+     "dl": "ОГЭ-2027. Задания 1–5. Участок — прототипы, ответы.pdf",
+     "size": "0,2 МБ"
+    },
+    "trenazher": {
+     "n": "oge2027-z01-05-uchastok-trenazher-free.pdf",
+     "dl": "ОГЭ-2027. Задания 1–5. Участок — тренажёр.pdf",
+     "size": "1,9 МБ"
+    }
+   }
+  },
+  "z01-05-shiny": {
+   "cell": "1–5",
+   "sr": "Задания 1–5. ",
+   "title": "Шины",
+   "sub": "Практико-ориентированные задачи 1–5",
+   "files": {
+    "prototipy": {
+     "n": "oge2027-z01-05-shiny-prototipy-free.pdf",
+     "dl": "ОГЭ-2027. Задания 1–5. Шины — прототипы.pdf",
+     "size": "2,1 МБ"
+    },
+    "prototipy-otvety": {
+     "n": "oge2027-z01-05-shiny-prototipy-otvety-free.pdf",
+     "dl": "ОГЭ-2027. Задания 1–5. Шины — прототипы, ответы.pdf",
+     "size": "0,2 МБ"
+    },
+    "trenazher": {
+     "n": "oge2027-z01-05-shiny-trenazher-free.pdf",
+     "dl": "ОГЭ-2027. Задания 1–5. Шины — тренажёр.pdf",
+     "size": "2,8 МБ"
+    }
+   }
+  },
+  "z06": {
+   "cell": "6",
+   "sr": "Задание 6. ",
+   "title": "Дроби и вычисления",
+   "sub": "",
+   "files": {
+    "prototipy": {
+     "n": "oge2027-z06-prototipy-free.pdf",
+     "dl": "ОГЭ-2027. Задание 6. Дроби и вычисления — прототипы.pdf",
+     "size": "0,2 МБ"
+    },
+    "prototipy-otvety": {
+     "n": "oge2027-z06-prototipy-otvety-free.pdf",
+     "dl": "ОГЭ-2027. Задание 6. Дроби и вычисления — прототипы, ответы.pdf",
+     "size": "0,2 МБ"
+    },
+    "trenazher": {
+     "n": "oge2027-z06-trenazher-free.pdf",
+     "dl": "ОГЭ-2027. Задание 6. Дроби и вычисления — тренажёр.pdf",
+     "size": "0,9 МБ"
+    }
+   }
+  },
+  "z07": {
+   "cell": "7",
+   "sr": "Задание 7. ",
+   "title": "Числа, координатная прямая",
+   "sub": "",
+   "files": {
+    "prototipy": {
+     "n": "oge2027-z07-prototipy-free.pdf",
+     "dl": "ОГЭ-2027. Задание 7. Числа, координатная прямая — прототипы.pdf",
+     "size": "0,2 МБ"
+    },
+    "prototipy-otvety": {
+     "n": "oge2027-z07-prototipy-otvety-free.pdf",
+     "dl": "ОГЭ-2027. Задание 7. Числа, координатная прямая — прототипы, ответы.pdf",
+     "size": "0,2 МБ"
+    },
+    "trenazher": {
+     "n": "oge2027-z07-trenazher-free.pdf",
+     "dl": "ОГЭ-2027. Задание 7. Числа, координатная прямая — тренажёр.pdf",
+     "size": "1,0 МБ"
+    }
+   }
+  },
+  "z08": {
+   "cell": "8",
+   "sr": "Задание 8. ",
+   "title": "Квадратные корни и степени",
+   "sub": "",
+   "files": {
+    "prototipy": {
+     "n": "oge2027-z08-prototipy-free.pdf",
+     "dl": "ОГЭ-2027. Задание 8. Квадратные корни и степени — прототипы.pdf",
+     "size": "0,4 МБ"
+    },
+    "prototipy-otvety": {
+     "n": "oge2027-z08-prototipy-otvety-free.pdf",
+     "dl": "ОГЭ-2027. Задание 8. Квадратные корни и степени — прототипы, ответы.pdf",
+     "size": "0,2 МБ"
+    },
+    "trenazher": {
+     "n": "oge2027-z08-trenazher-free.pdf",
+     "dl": "ОГЭ-2027. Задание 8. Квадратные корни и степени — тренажёр.pdf",
+     "size": "1,8 МБ"
+    }
+   }
+  },
+  "z09": {
+   "cell": "9",
+   "sr": "Задание 9. ",
+   "title": "Уравнения",
+   "sub": "",
+   "files": {
+    "prototipy": {
+     "n": "oge2027-z09-prototipy-free.pdf",
+     "dl": "ОГЭ-2027. Задание 9. Уравнения — прототипы.pdf",
+     "size": "0,2 МБ"
+    },
+    "prototipy-otvety": {
+     "n": "oge2027-z09-prototipy-otvety-free.pdf",
+     "dl": "ОГЭ-2027. Задание 9. Уравнения — прототипы, ответы.pdf",
+     "size": "0,2 МБ"
+    },
+    "trenazher": {
+     "n": "oge2027-z09-trenazher-free.pdf",
+     "dl": "ОГЭ-2027. Задание 9. Уравнения — тренажёр.pdf",
+     "size": "0,9 МБ"
+    }
+   }
+  },
+  "z10": {
+   "cell": "10",
+   "sr": "Задание 10. ",
+   "title": "Теория вероятностей",
+   "sub": "",
+   "files": {
+    "prototipy": {
+     "n": "oge2027-z10-prototipy-free.pdf",
+     "dl": "ОГЭ-2027. Задание 10. Теория вероятностей — прототипы.pdf",
+     "size": "0,4 МБ"
+    },
+    "prototipy-otvety": {
+     "n": "oge2027-z10-prototipy-otvety-free.pdf",
+     "dl": "ОГЭ-2027. Задание 10. Теория вероятностей — прототипы, ответы.pdf",
+     "size": "0,2 МБ"
+    },
+    "trenazher": {
+     "n": "oge2027-z10-trenazher-free.pdf",
+     "dl": "ОГЭ-2027. Задание 10. Теория вероятностей — тренажёр.pdf",
+     "size": "1,7 МБ"
+    }
+   }
+  },
+  "z11": {
+   "cell": "11",
+   "sr": "Задание 11. ",
+   "title": "Графики функций",
+   "sub": "",
+   "files": {
+    "prototipy": {
+     "n": "oge2027-z11-prototipy-free.pdf",
+     "dl": "ОГЭ-2027. Задание 11. Графики функций — прототипы.pdf",
+     "size": "0,2 МБ"
+    },
+    "prototipy-otvety": {
+     "n": "oge2027-z11-prototipy-otvety-free.pdf",
+     "dl": "ОГЭ-2027. Задание 11. Графики функций — прототипы, ответы.pdf",
+     "size": "0,2 МБ"
+    },
+    "trenazher": {
+     "n": "oge2027-z11-trenazher-free.pdf",
+     "dl": "ОГЭ-2027. Задание 11. Графики функций — тренажёр.pdf",
+     "size": "0,9 МБ"
+    }
+   }
+  },
+  "z12": {
+   "cell": "12",
+   "sr": "Задание 12. ",
+   "title": "Расчёты по формулам",
+   "sub": "",
+   "files": {
+    "prototipy": {
+     "n": "oge2027-z12-prototipy-free.pdf",
+     "dl": "ОГЭ-2027. Задание 12. Расчёты по формулам — прототипы.pdf",
+     "size": "0,2 МБ"
+    },
+    "prototipy-otvety": {
+     "n": "oge2027-z12-prototipy-otvety-free.pdf",
+     "dl": "ОГЭ-2027. Задание 12. Расчёты по формулам — прототипы, ответы.pdf",
+     "size": "0,2 МБ"
+    },
+    "trenazher": {
+     "n": "oge2027-z12-trenazher-free.pdf",
+     "dl": "ОГЭ-2027. Задание 12. Расчёты по формулам — тренажёр.pdf",
+     "size": "0,9 МБ"
+    }
+   }
+  },
+  "z13": {
+   "cell": "13",
+   "sr": "Задание 13. ",
+   "title": "Неравенства",
+   "sub": "",
+   "files": {
+    "prototipy": {
+     "n": "oge2027-z13-prototipy-free.pdf",
+     "dl": "ОГЭ-2027. Задание 13. Неравенства — прототипы.pdf",
+     "size": "0,2 МБ"
+    },
+    "prototipy-otvety": {
+     "n": "oge2027-z13-prototipy-otvety-free.pdf",
+     "dl": "ОГЭ-2027. Задание 13. Неравенства — прототипы, ответы.pdf",
+     "size": "0,2 МБ"
+    },
+    "trenazher": {
+     "n": "oge2027-z13-trenazher-free.pdf",
+     "dl": "ОГЭ-2027. Задание 13. Неравенства — тренажёр.pdf",
+     "size": "0,9 МБ"
+    }
+   }
+  },
+  "z14": {
+   "cell": "14",
+   "sr": "Задание 14. ",
+   "title": "Прогрессии",
+   "sub": "",
+   "files": {
+    "prototipy": {
+     "n": "oge2027-z14-prototipy-free.pdf",
+     "dl": "ОГЭ-2027. Задание 14. Прогрессии — прототипы.pdf",
+     "size": "0,2 МБ"
+    },
+    "prototipy-otvety": {
+     "n": "oge2027-z14-prototipy-otvety-free.pdf",
+     "dl": "ОГЭ-2027. Задание 14. Прогрессии — прототипы, ответы.pdf",
+     "size": "0,2 МБ"
+    },
+    "trenazher": {
+     "n": "oge2027-z14-trenazher-free.pdf",
+     "dl": "ОГЭ-2027. Задание 14. Прогрессии — тренажёр.pdf",
+     "size": "0,9 МБ"
+    }
+   }
+  },
+  "z15": {
+   "cell": "15",
+   "sr": "Задание 15. ",
+   "title": "Треугольники",
+   "sub": "",
+   "files": {
+    "prototipy": {
+     "n": "oge2027-z15-prototipy-free.pdf",
+     "dl": "ОГЭ-2027. Задание 15. Треугольники — прототипы.pdf",
+     "size": "0,4 МБ"
+    },
+    "prototipy-otvety": {
+     "n": "oge2027-z15-prototipy-otvety-free.pdf",
+     "dl": "ОГЭ-2027. Задание 15. Треугольники — прототипы, ответы.pdf",
+     "size": "0,2 МБ"
+    },
+    "trenazher": {
+     "n": "oge2027-z15-trenazher-free.pdf",
+     "dl": "ОГЭ-2027. Задание 15. Треугольники — тренажёр.pdf",
+     "size": "1,8 МБ"
+    }
+   }
+  },
+  "z16": {
+   "cell": "16",
+   "sr": "Задание 16. ",
+   "title": "Окружность, круг и их элементы",
+   "sub": "",
+   "files": {
+    "prototipy": {
+     "n": "oge2027-z16-prototipy-free.pdf",
+     "dl": "ОГЭ-2027. Задание 16. Окружность, круг и их элементы — прототипы.pdf",
+     "size": "0,4 МБ"
+    },
+    "prototipy-otvety": {
+     "n": "oge2027-z16-prototipy-otvety-free.pdf",
+     "dl": "ОГЭ-2027. Задание 16. Окружность, круг и их элементы — прототипы, ответы.pdf",
+     "size": "0,2 МБ"
+    },
+    "trenazher": {
+     "n": "oge2027-z16-trenazher-free.pdf",
+     "dl": "ОГЭ-2027. Задание 16. Окружность, круг и их элементы — тренажёр.pdf",
+     "size": "1,9 МБ"
+    }
+   }
+  },
+  "z17": {
+   "cell": "17",
+   "sr": "Задание 17. ",
+   "title": "Четырёхугольники",
+   "sub": "",
+   "files": {
+    "prototipy": {
+     "n": "oge2027-z17-prototipy-free.pdf",
+     "dl": "ОГЭ-2027. Задание 17. Четырёхугольники — прототипы.pdf",
+     "size": "0,4 МБ"
+    },
+    "prototipy-otvety": {
+     "n": "oge2027-z17-prototipy-otvety-free.pdf",
+     "dl": "ОГЭ-2027. Задание 17. Четырёхугольники — прототипы, ответы.pdf",
+     "size": "0,2 МБ"
+    },
+    "trenazher": {
+     "n": "oge2027-z17-trenazher-free.pdf",
+     "dl": "ОГЭ-2027. Задание 17. Четырёхугольники — тренажёр.pdf",
+     "size": "1,8 МБ"
+    }
+   }
+  },
+  "z18": {
+   "cell": "18",
+   "sr": "Задание 18. ",
+   "title": "Фигуры на квадратной решётке",
+   "sub": "",
+   "files": {
+    "prototipy": {
+     "n": "oge2027-z18-prototipy-free.pdf",
+     "dl": "ОГЭ-2027. Задание 18. Фигуры на квадратной решётке — прототипы.pdf",
+     "size": "0,2 МБ"
+    },
+    "prototipy-otvety": {
+     "n": "oge2027-z18-prototipy-otvety-free.pdf",
+     "dl": "ОГЭ-2027. Задание 18. Фигуры на квадратной решётке — прототипы, ответы.pdf",
+     "size": "0,2 МБ"
+    },
+    "trenazher": {
+     "n": "oge2027-z18-trenazher-free.pdf",
+     "dl": "ОГЭ-2027. Задание 18. Фигуры на квадратной решётке — тренажёр.pdf",
+     "size": "0,9 МБ"
+    }
+   }
+  },
+  "z19": {
+   "cell": "19",
+   "sr": "Задание 19. ",
+   "title": "Анализ геометрических высказываний",
+   "sub": "",
+   "files": {
+    "prototipy": {
+     "n": "oge2027-z19-prototipy-free.pdf",
+     "dl": "ОГЭ-2027. Задание 19. Анализ геометрических высказываний — прототипы.pdf",
+     "size": "0,4 МБ"
+    },
+    "prototipy-otvety": {
+     "n": "oge2027-z19-prototipy-otvety-free.pdf",
+     "dl": "ОГЭ-2027. Задание 19. Анализ геометрических высказываний — прототипы, ответы.pdf",
+     "size": "0,2 МБ"
+    },
+    "trenazher": {
+     "n": "oge2027-z19-trenazher-free.pdf",
+     "dl": "ОГЭ-2027. Задание 19. Анализ геометрических высказываний — тренажёр.pdf",
+     "size": "0,4 МБ"
+    }
+   }
+  },
+  "z20": {
+   "cell": "20",
+   "sr": "Задание 20. ",
+   "title": "Алгебраические выражения, уравнения, неравенства и их системы",
+   "sub": "",
+   "files": {
+    "prototipy": {
+     "n": "oge2027-z20-prototipy-free.pdf",
+     "dl": "ОГЭ-2027. Задание 20. Алгебраические выражения, уравнения, неравенства и их системы — прототипы.pdf",
+     "size": "0,2 МБ"
+    },
+    "prototipy-otvety": {
+     "n": "oge2027-z20-prototipy-otvety-free.pdf",
+     "dl": "ОГЭ-2027. Задание 20. Алгебраические выражения, уравнения, неравенства и их системы — прототипы, ответы.pdf",
+     "size": "0,2 МБ"
+    },
+    "trenazher": {
+     "n": "oge2027-z20-trenazher-free.pdf",
+     "dl": "ОГЭ-2027. Задание 20. Алгебраические выражения, уравнения, неравенства и их системы — тренажёр.pdf",
+     "size": "0,9 МБ"
+    }
+   }
+  },
+  "z21": {
+   "cell": "21",
+   "sr": "Задание 21. ",
+   "title": "Текстовые задачи",
+   "sub": "",
+   "files": {
+    "prototipy": {
+     "n": "oge2027-z21-prototipy-free.pdf",
+     "dl": "ОГЭ-2027. Задание 21. Текстовые задачи — прототипы.pdf",
+     "size": "0,4 МБ"
+    },
+    "prototipy-otvety": {
+     "n": "oge2027-z21-prototipy-otvety-free.pdf",
+     "dl": "ОГЭ-2027. Задание 21. Текстовые задачи — прототипы, ответы.pdf",
+     "size": "0,2 МБ"
+    },
+    "trenazher": {
+     "n": "oge2027-z21-trenazher-free.pdf",
+     "dl": "ОГЭ-2027. Задание 21. Текстовые задачи — тренажёр.pdf",
+     "size": "1,7 МБ"
+    }
+   }
+  },
+  "z22": {
+   "cell": "22",
+   "sr": "Задание 22. ",
+   "title": "Функции и их свойства. Графики функций",
+   "sub": "",
+   "files": {
+    "prototipy": {
+     "n": "oge2027-z22-prototipy-free.pdf",
+     "dl": "ОГЭ-2027. Задание 22. Функции и их свойства. Графики функций — прототипы.pdf",
+     "size": "0,2 МБ"
+    },
+    "prototipy-otvety": {
+     "n": "oge2027-z22-prototipy-otvety-free.pdf",
+     "dl": "ОГЭ-2027. Задание 22. Функции и их свойства. Графики функций — прототипы, ответы.pdf",
+     "size": "0,3 МБ"
+    },
+    "trenazher": {
+     "n": "oge2027-z22-trenazher-free.pdf",
+     "dl": "ОГЭ-2027. Задание 22. Функции и их свойства. Графики функций — тренажёр.pdf",
+     "size": "0,9 МБ"
+    }
+   }
+  },
+  "z23": {
+   "cell": "23",
+   "sr": "Задание 23. ",
+   "title": "Геометрическая задача на вычисление",
+   "sub": "",
+   "files": {
+    "prototipy": {
+     "n": "oge2027-z23-prototipy-free.pdf",
+     "dl": "ОГЭ-2027. Задание 23. Геометрическая задача на вычисление — прототипы.pdf",
+     "size": "0,4 МБ"
+    },
+    "prototipy-otvety": {
+     "n": "oge2027-z23-prototipy-otvety-free.pdf",
+     "dl": "ОГЭ-2027. Задание 23. Геометрическая задача на вычисление — прототипы, ответы.pdf",
+     "size": "0,2 МБ"
+    },
+    "trenazher": {
+     "n": "oge2027-z23-trenazher-free.pdf",
+     "dl": "ОГЭ-2027. Задание 23. Геометрическая задача на вычисление — тренажёр.pdf",
+     "size": "1,7 МБ"
+    }
+   }
+  },
+  "z24": {
+   "cell": "24",
+   "sr": "Задание 24. ",
+   "title": "Геометрическая задача на доказательство",
+   "sub": "",
+   "files": {
+    "prototipy": {
+     "n": "oge2027-z24-prototipy-free.pdf",
+     "dl": "ОГЭ-2027. Задание 24. Геометрическая задача на доказательство — прототипы.pdf",
+     "size": "0,2 МБ"
+    },
+    "trenazher": {
+     "n": "oge2027-z24-trenazher-free.pdf",
+     "dl": "ОГЭ-2027. Задание 24. Геометрическая задача на доказательство — тренажёр.pdf",
+     "size": "0,9 МБ"
+    }
+   }
+  },
+  "z25": {
+   "cell": "25",
+   "sr": "Задание 25. ",
+   "title": "Геометрическая задача повышенной сложности",
+   "sub": "",
+   "files": {
+    "prototipy": {
+     "n": "oge2027-z25-prototipy-free.pdf",
+     "dl": "ОГЭ-2027. Задание 25. Геометрическая задача повышенной сложности — прототипы.pdf",
+     "size": "0,2 МБ"
+    },
+    "prototipy-otvety": {
+     "n": "oge2027-z25-prototipy-otvety-free.pdf",
+     "dl": "ОГЭ-2027. Задание 25. Геометрическая задача повышенной сложности — прототипы, ответы.pdf",
+     "size": "0,2 МБ"
+    },
+    "trenazher": {
+     "n": "oge2027-z25-trenazher-free.pdf",
+     "dl": "ОГЭ-2027. Задание 25. Геометрическая задача повышенной сложности — тренажёр.pdf",
+     "size": "0,9 МБ"
+    }
+   }
+  }
+ }
+}
+</script>
 
 <script>
-document.querySelectorAll(".zoomable").forEach(function(box){
-  var img=box.querySelector("img"), lens=box.querySelector(".lens"), src=box.dataset.zoom, ready=false, k=2.2;
-  function load(){
-    if(ready) return; ready=true;
-    var pre=new Image();
-    pre.onload=function(){ lens.style.backgroundImage="url("+src+")"; };
-    pre.src=src;
+const DATA=JSON.parse(document.getElementById('sets-data').textContent);
+const DL='<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>';
+const LOCK='<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>';
+const XI='<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+
+const dlg=document.getElementById('dlg');
+const dlgBody=document.getElementById('dlg-body');
+const toastEl=document.getElementById('toast');
+let toastTimer;
+function toast(msg){
+  (dlg.open?dlg:document.body).appendChild(toastEl);
+  toastEl.textContent=msg;
+  toastEl.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer=setTimeout(()=>toastEl.classList.remove('show'),2800);
+}
+
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+// download — чтобы файл лёг на диск с русским именем, а URL остался латинским
+const file=(cls,f,label,icon='')=>
+  `<a class="btn ${cls}" href="files/${f.n}" download="${esc(f.dl)}">${icon}${label}</a>`;
+const lock=`<a class="btn btn-lock" href="${esc(DATA.donut)}" target="_blank" rel="noopener" title="Ответы к тренажёру в подписке VK Donut">${LOCK}Ответы</a>`;
+const row=(t,d,a)=>`<li><div class="f-t"><b>${t}</b>${d?`<span>${d}</span>`:''}</div><div class="f-a">${a}</div></li>`;
+
+function rowsFor(s){
+  const f=s.files;
+  let out='';
+  if(f.prototipy){
+    const sub='По одному примеру на каждый прототип · PDF, '+f.prototipy.size;
+    out+=row('Прототипы',sub,
+      file('btn-dark',f.prototipy,'PDF',DL)
+      +(f['prototipy-otvety']?file('btn-out',f['prototipy-otvety'],'Ответы'):''));
   }
-  box.addEventListener("pointerenter",function(e){ if(e.pointerType==="mouse"){ load(); } });
-  box.addEventListener("pointerleave",function(){ box.classList.remove("on"); });
-  box.addEventListener("pointermove",function(e){
-    if(e.pointerType!=="mouse") return;
-    var r=img.getBoundingClientRect(), s=lens.offsetWidth/2;
-    var x=e.clientX-r.left, y=e.clientY-r.top;
-    if(x<0||y<0||x>r.width||y>r.height){ box.classList.remove("on"); return; }
-    box.classList.add("on");
-    lens.style.left=(x-s)+"px"; lens.style.top=(y-s)+"px";
-    lens.style.backgroundSize=(r.width*k)+"px "+(r.height*k)+"px";
-    lens.style.backgroundPosition=(-(x*k-s))+"px "+(-(y*k-s))+"px";
-  });
+  if(f.trenazher){
+    const sub='По пять задач на каждый прототип · PDF, '+f.trenazher.size;
+    out+=row('Тренажёр',sub,
+      file('btn-dark',f.trenazher,'PDF',DL)
+      +(f['trenazher-otvety']?file('btn-out',f['trenazher-otvety'],'Ответы')
+        :(s.cell==='24'?'':lock)));
+  }
+  return out;
+}
+
+function openTask(k){
+  const s=DATA.sets[k];
+  if(!s)return;
+  const locked=!s.files['trenazher-otvety'] && s.cell!=='24';
+  dlgBody.innerHTML=`<div class="p-head"><span class="p-cell" aria-hidden="true">${esc(s.cell)}</span>`
+    +`<div class="p-t"><h2 id="dlg-title"><span class="sr">${esc(s.sr)}</span>${esc(s.title)}</h2>`
+    +`${s.sub?`<p>${esc(s.sub)}</p>`:''}</div>`
+    +`<button class="x" type="button" aria-label="Закрыть">${XI}</button></div>`
+    +`<ul class="rows">${rowsFor(s)}</ul>`
+    +`<div class="p-foot"><button class="copy" type="button" data-k="${esc(k)}">Скопировать ссылку на задание</button>`
+    +`${locked?'<span>Ответы к тренажёру доступны подписчикам VK Donut</span>':''}</div>`;
+  if(!dlg.open)dlg.showModal();
+  try{history.replaceState(null,'','#'+k)}catch(e){}
+}
+
+dlg.addEventListener('close',()=>{
+  document.body.appendChild(toastEl);
+  try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}
+});
+dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
+
+document.querySelectorAll('a.tile').forEach(t=>{
+  t.setAttribute('aria-haspopup','dialog');
+  t.addEventListener('click',e=>{e.preventDefault();openTask(t.dataset.k)});
+});
+
+function fromHash(){if(location.hash.length>1)openTask(location.hash.slice(1))}
+addEventListener('hashchange',fromHash);
+fromHash();
+
+document.addEventListener('click',e=>{
+  if(e.target.closest('.x')){dlg.close();return}
+  const c=e.target.closest('.copy');
+  if(c){
+    const url=DATA.site+'#'+c.dataset.k;
+    (navigator.clipboard?navigator.clipboard.writeText(url):Promise.reject())
+      .then(()=>toast('Ссылка скопирована: '+url),()=>toast('Ссылка на задание: '+url));
+  }
 });
 </script>
 </body>
