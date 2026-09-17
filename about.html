@@ -100,6 +100,18 @@ svg.i{width:18px;height:18px;flex:none}
 .foot-links a{font-weight:500}
 .copyr{margin-top:28px;font-size:13px;color:var(--muted)}
 
+/* Кнопка в кабинет. Она ведёт на другой поддомен, поэтому выделена рамкой
+   и стрелкой: посетитель должен понимать, что уходит в другое место, а не
+   проваливается в ещё один раздел этой же страницы. */
+.lk{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;
+  border:1.5px solid var(--ink);border-radius:10px;color:var(--ink);
+  text-decoration:none;font-weight:600;white-space:nowrap;
+  transition:background .15s}
+.lk:hover{background:var(--orange-soft)}
+.lk .dot{width:10px;height:10px;border-radius:50%;background:var(--orange);flex:none}
+.lk small{font-size:13.5px;font-weight:400;color:var(--muted)}
+.nav a.here{color:var(--orange)}
+
 @media (max-width:900px){
   .wrap{padding-left:18px;padding-right:18px}
   .top-in{flex-wrap:wrap;height:auto;padding-top:14px;padding-bottom:12px;gap:12px 14px}
@@ -107,7 +119,13 @@ svg.i{width:18px;height:18px;flex:none}
   .nav{order:3;width:100%;margin-left:0;gap:22px;overflow-x:auto;padding-bottom:2px}
   .intro h1{font-size:28px}
 }
-@media (max-width:600px){.intro h1{font-size:24px}}
+@media (max-width:600px){
+  .intro h1{font-size:24px}
+  /* nowrap держит кнопку в одну строку, и на узком экране её 386 px не
+     влезают в доступные 339 — появляется горизонтальная прокрутка всей
+     страницы. На телефоне разрешаем перенос и растягиваем на всю ширину. */
+  .lk{width:100%;justify-content:center;white-space:normal;text-align:center}
+}
 @media (max-width:520px){.social{display:none}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 
@@ -192,6 +210,7 @@ svg.i{width:18px;height:18px;flex:none}
     </a>
     <nav class="nav" aria-label="Разделы">
       <a href="/">Задания</a>
+      <a href="https://lk.velichkomath.ru" class="here">Кабинет ученика</a>
       <a href="about.html" aria-current="page">О проекте</a>
     </nav>
     <div class="social">
@@ -315,6 +334,7 @@ svg.i{width:18px;height:18px;flex:none}
         <a href="https://vk.com/miniurokipomatematike" target="_blank" rel="noopener">Группа VK</a>
         <a href="https://t.me/pif_oge" target="_blank" rel="noopener">Telegram-канал</a>
         <a href="https://www.youtube.com/@Миниурокипоматематике" target="_blank" rel="noopener">YouTube «Мини уроки по математике»</a>
+        <a href="https://lk.velichkomath.ru">Личный кабинет ученика</a>
         <a href="/">Задания ОГЭ по номерам</a>
       </nav>
     </div>
