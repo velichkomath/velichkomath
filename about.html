@@ -177,7 +177,8 @@ svg.i{width:18px;height:18px;flex:none}
 .plan ul{margin-top:18px;display:grid;gap:11px}
 .plan li{padding-left:22px;position:relative}
 .plan li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:2px;background:var(--orange)}
-.status{margin-top:20px;padding:12px 16px;background:var(--wash);border-left:3px solid var(--orange);border-radius:0 8px 8px 0;font-size:15px}
+.plan-acts{margin-top:22px}
+.status{margin-top:16px;padding:12px 16px;background:var(--wash);border-left:3px solid var(--orange);border-radius:0 8px 8px 0;font-size:15px}
 
 .author{display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start;max-width:760px}
 .portrait{width:120px;height:120px;border-radius:50%;object-fit:cover;flex:none}
@@ -229,6 +230,7 @@ svg.i{width:18px;height:18px;flex:none}
       <div class="acts">
         <a class="btn btn-main" href="files/oge-2027-obrazec-raboty.pdf" download="ОГЭ-2027 математика. Образец тренировочной работы (Величко).pdf">Скачать образец</a>
         <a class="btn btn-out" href="https://vk.com/miniurokipomatematike" target="_blank" rel="noopener">Сообщество ВКонтакте</a>
+        <a class="btn btn-out" href="#podpiska">Подписка — 299 ₽/мес</a>
       </div>
       <p class="note">Образец: работа № 6, PDF на 5 страниц, готов к печати на A4, без регистрации.<br><a href="files/oge-2027-obrazec-otvety.pdf" download="ОГЭ-2027 математика. Образец — лист ответов (Величко).pdf">Лист ответов отдельным файлом →</a></p>
       <p class="zoom-hint">Наведите курсор на страницу — покажу набор вблизи.</p>
@@ -239,11 +241,12 @@ svg.i{width:18px;height:18px;flex:none}
   </section>
 
   <section class="wrap sec">
-    <h2>Что выходит каждый вторник</h2>
+    <h2>Что выходит каждую неделю</h2>
     <ul class="parts">
-      <li><span class="qty">1</span><div><b>Тренировочная работа</b><span>Полный вариант, задания 1–25, обе части, бланк ответов.</span></div></li>
-      <li><span class="qty">3</span><div><b>Разминки</b><span>Короткие карточки на 5–7 минут: блоки 6–10, 11–14, 15–19. По два варианта каждая.</span></div></li>
-      <li><span class="qty">+</span><div><b>Ответы</b><span>К разминке — сразу. К варианту — отдельным постом через неделю.</span></div></li>
+      <li><span class="qty">Вт</span><div><b>Тренировочная работа</b><span>Полный вариант ОГЭ, задания 1–25, обе части. Четыре исполнения.</span></div></li>
+      <li><span class="qty">Ср</span><div><b>Разминки</b><span>Три карточки на 5 минут в начале урока: блоки 6–10, 11–14, 15–19.</span></div></li>
+      <li><span class="qty">Чт</span><div><b>Практикум по части 2</b><span>Задания 20–25 с полем для решения прямо на листе.</span></div></li>
+      <li><span class="qty">+</span><div><b>Маршрутные листы</b><span>Листы по темам для 5–9 классов — для урока или работы дома.</span></div></li>
     </ul>
   </section>
 
@@ -260,7 +263,7 @@ svg.i{width:18px;height:18px;flex:none}
   <section class="wrap sec">
     <h2>Каждый вторник, 9:00 по Москве</h2>
     <p>Выпуски идут с 25 августа по май — весь учебный год. К концу года через класс проходит открытый банк заданий целиком.</p>
-    <p>Бесплатная версия выкладывается в сообществе ВКонтакте: один вариант, три разминки, ответы. Ничего покупать не нужно.</p>
+    <p>Бесплатно в сообществе ВКонтакте: вариант 1 тренировочной работы (ответы к нему — в следующий понедельник), первая карточка разминки и маршрутные листы. Регистрация не нужна.</p>
     <div class="cal-grid">
       <div class="mon"><h3>Август</h3><ul><li class="first">25</li></ul></div>
       <div class="mon"><h3>Сентябрь</h3><ul><li>1</li><li>8</li><li>15</li><li>22</li><li>29</li></ul></div>
@@ -271,19 +274,22 @@ svg.i{width:18px;height:18px;flex:none}
     <p class="cal-note">Первый выпуск — <b>25 августа</b>. Дальше каждый вторник; после новогодних каникул выпуски продолжаются с 12 января, календарь второго полугодия появится в декабре.</p>
   </section>
 
-  <section class="wrap sec">
+  <section class="wrap sec" id="podpiska">
     <h2>Подписка</h2>
     <div class="plan">
       <p class="price"><b>299 ₽</b><i>в месяц</i></p>
       <p>Всё бесплатное плюс:</p>
       <ul>
-        <li><b>Один вариант в четырёх исполнениях.</b> Та же структура и те же прототипы, другие числа — четыре ряда пишут разные работы, проверяются по одному разбору.</li>
-        <li><b>Ответы сразу</b>, не через неделю.</li>
-        <li><b>Файл без водяного знака и QR-кода</b> — чистая печать.</li>
-        <li><b>Навигация по всему архиву</b>: по неделям и по номерам заданий 1–25.</li>
+        <li><b>Работа в четырёх исполнениях.</b> Та же структура и те же прототипы, другие числа — четыре ряда пишут разные работы, а проверяются по одному листу ответов.</li>
+        <li><b>Ответы в день выхода</b> — к работе, разминкам и маршрутным листам, а не в следующий понедельник.</li>
+        <li><b>Все три карточки разминки</b> и <b>практикум по части 2</b> каждую неделю.</li>
+        <li><b>Файлы без штампа и QR-кода</b> — чистая печать.</li>
+        <li><b>Архив выпусков по неделям</b> в одной статье — ничего не нужно искать по ленте.</li>
       </ul>
-      <!-- ПЕРЕКЛЮЧИТЬ 1 сентября: заменить блок .status на кнопку в Донат -->
-      <p class="status">Подписка открывается 1 сентября 2026 года.</p>
+      <div class="acts plan-acts">
+        <a class="btn btn-main" href="https://vk.com/donut/miniurokipomatematike" target="_blank" rel="noopener" data-donut="about_plan">Оформить подписку — 299 ₽/мес</a>
+      </div>
+      <p class="status">Оплата и отмена — через VK Donut, отменить можно в любой момент. После оплаты материалы открываются в постах для донов в сообществе (вкладка «VK Донат» на стене).</p>
     </div>
   </section>
 
@@ -362,6 +368,12 @@ document.querySelectorAll(".zoomable").forEach(function(box){
     lens.style.backgroundSize=(r.width*k)+"px "+(r.height*k)+"px";
     lens.style.backgroundPosition=(-(x*k-s))+"px "+(-(y*k-s))+"px";
   });
+});
+</script>
+<script>
+document.addEventListener('click',function(e){
+  var a=e.target.closest('a[data-donut]');
+  if(a){try{if(window.ym)ym(112484056,'reachGoal','donut_click',{mesto:a.dataset.donut})}catch(_){}}
 });
 </script>
 </body>

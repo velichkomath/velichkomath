@@ -81,6 +81,10 @@ svg.i{width:18px;height:18px;flex:none}
 .intro{display:flex;align-items:flex-end;justify-content:space-between;gap:16px 40px;flex-wrap:wrap;padding-top:24px;padding-bottom:18px}
 .intro h1{font-size:34px;line-height:1.1;font-weight:800;letter-spacing:-.02em}
 .lead{margin-top:6px;font-size:16px;color:var(--muted);max-width:64ch}
+.offer{display:flex;align-items:center;justify-content:space-between;gap:14px 28px;flex-wrap:wrap;margin-bottom:22px;padding:14px 18px;background:var(--orange-soft);border-radius:12px;font-size:15px}
+.offer p{max-width:70ch}
+.offer-acts{display:flex;gap:10px;flex-wrap:wrap}
+@media (max-width:600px){.offer-acts .btn{flex:1 1 auto}}
 
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:10px 16px;border-radius:8px;border:1.5px solid transparent;font:inherit;font-size:15px;font-weight:600;line-height:1.2;text-decoration:none;white-space:nowrap;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
 .btn-dark{background:var(--ink);color:#fff}
@@ -209,6 +213,17 @@ dialog[open]{animation:pop .18s ease-out}
     </div>
     <a class="lk" href="https://lk.velichkomath.ru"><span class="dot" aria-hidden="true"></span>
       Личный кабинет ученика</a>
+  </div>
+
+  <div class="wrap">
+    <aside class="offer" aria-label="Еженедельные выпуски и подписка">
+      <p><b>Каждую неделю — новая тренировочная работа, разминки и практикум по части 2.</b>
+      Вариант 1 бесплатно в сообществе ВК. Подписка 299 ₽/мес: четыре исполнения, ответы в день выхода, чистые файлы.</p>
+      <div class="offer-acts">
+        <a class="btn btn-main" href="https://vk.com/donut/miniurokipomatematike" target="_blank" rel="noopener" data-donut data-goal="donut_glavnaya" data-key="glavnaya">Оформить подписку — 299 ₽/мес</a>
+        <a class="btn btn-out" href="about.html#podpiska">Что входит</a>
+      </div>
+    </aside>
   </div>
 
   <section id="tasks" class="wrap tasks" aria-label="Задания ОГЭ по номерам">
@@ -986,7 +1001,7 @@ document.addEventListener('click',e=>{
   const a=e.target.closest('a[data-kind]');
   if(a){goal('skachal_'+a.dataset.kind.replace(/-/g,'_'),{zadanie:a.dataset.key});return}
   const dn=e.target.closest('a[data-donut]');
-  if(dn){goal('donut_iz_okna',{zadanie:dn.dataset.key});return}
+  if(dn){goal(dn.dataset.goal||'donut_iz_okna',{zadanie:dn.dataset.key});return}
   const c=e.target.closest('.copy');
   if(c){
     const url=DATA.site+'#'+c.dataset.k;
